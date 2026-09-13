@@ -578,7 +578,10 @@
                 <p>Parliamo del tuo progetto — senza impegno</p>
             </div>
             <div class="contact-form">
-                <form action="https://formspree.io/f/your-form-id" method="POST">
+                <form name="contatti" netlify netlify-honeypot="bot-field" action="/success" method="POST">
+                    <!-- Campo honeypot anti-spam -->
+                    <p style="display:none"><label>Non riempire questo campo <input name="bot-field"/></label></p>
+
                     <div class="form-group">
                         <label for="name">Nome e Cognome</label>
                         <input type="text" id="name" name="name" required placeholder="Mario Rossi">
